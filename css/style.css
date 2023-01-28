@@ -22,6 +22,7 @@ body {
     width: 1660px;
 }
 
+/* Header */
 header {
     color: #fff;
     font-family: OpenSans, sans-serif;
@@ -75,13 +76,13 @@ header::after {
     margin-top: 10px;
 }
 
-.menu__item {
+.menu-item {
     text-decoration: none;
     font-size: 13px;
     color: inherit;
 }
 
-.menu__item:nth-child(n+1) {
+.menu-item:nth-child(n+1) {
     margin-left: 35px;
 }
 
@@ -100,16 +101,52 @@ header::after {
     text-align: center;    
 }
 
-.intro__text {
+.intro-text {
     width: 690px;
 }
 
+/*----------------------------- Trends ----------------------------- */
+
+.trends {
+    width: 100%;
+    height: 442px;
+}
+
+.trends-title {
+    width: 100%;
+    height: 123px;
+    position: relative;
+}
+
+.trends-title-text {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    font-family: OpenSans sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.underline {
+    position: absolute;
+    margin-top: 13px;
+    background-color: #e1d9bd;
+    width: 66px;
+    height: 3px;
+    left: calc(50% - 33px);
+}
+
+/*----------------------------- Footer ------------------------------*/
 footer {
     min-width: 100%;
     height: 213px;
 }
 
-.footer__container {
+.footer-container {
     width: 1200px;
     box-sizing: border-box;
     margin-left: auto;
@@ -127,7 +164,6 @@ footer {
     height: 83px;
     width: 100%;
     background-color: #f4f7f6;
-    font-size: 16px;
     text-decoration: none;
 }
 
@@ -135,7 +171,12 @@ footer {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.socials-item:nth-child(n+2) {
+    margin-left: 35px;
 }
 
 .socials-link {
@@ -145,7 +186,6 @@ footer {
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: center;
-
 }
 
 .socials-link-text {
@@ -165,4 +205,16 @@ footer {
 
 .socials-link-tumblr {
     background-image: url("../svg/003-tumblr.svg");
+}
+
+.copyright-text {
+    display: block;
+    width: 100%;
+    margin-top: 74px;
+    color: #a0a0a0;
+    text-align: center;
+    font-family: OpenSans sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 40px;
 }
