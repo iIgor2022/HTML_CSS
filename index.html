@@ -5,21 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coursework</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobile.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="panel">
                 <img class="logo" src="svg/noemi-logo.svg" alt="Logo">
-                <nav class="menu">
-                    <a class="menu-item" href="">Главная</a>
-                    <a class="menu-item" href="#">Посты</a>
-                    <a class="menu-item" href="#">Статьи</a>
-                    <a class="menu-item" href="#">Темы</a>
-                    <a class="menu-item" href="#">Теги</a>
-                    <a class="menu-item" href="#">Контакты</a>
-                </nav>
+                <div class="hamberger-menu">
+                    <input type="checkbox" id="menu__toggle">
+                    <label for="menu__toggle" class="menu__button">
+                        <span></span>
+                    </label>
+                    <nav class="menu">
+                        <a class="menu-item" href="">Главная</a>
+                        <a class="menu-item" href="#">Посты</a>
+                        <a class="menu-item" href="#">Статьи</a>
+                        <a class="menu-item" href="#">Темы</a>
+                        <a class="menu-item" href="#">Теги</a>
+                        <a class="menu-item" href="#">Контакты</a>
+                    </nav>
+                </div>
             </div>
             <div class="intro">
                 <span class="intro-text">
@@ -258,28 +264,34 @@
                 </div>
                 <ul class="side-bar__categories">
                     <li class="side-bar__category">
-                        <a href="#" class="side-bar__category__link">Красота</a>
-                        <sup class="side-bar__category__count">12</sup>
+                        <a href="#" class="side-bar__category__link">Красота
+                            <sup class="side-bar__category__count">12</sup>
+                        </a>
                     </li>
                     <li class="side-bar__category">
-                        <a href="#" class="side-bar__category__link">Здоровье</a>
-                        <sup class="side-bar__category__count">4</sup>
+                        <a href="#" class="side-bar__category__link">Здоровье
+                            <sup class="side-bar__category__count">4</sup>
+                        </a>
                     </li>
                     <li class="side-bar__category">
-                        <a href="#" class="side-bar__category__link">Образ жизни</a>
-                        <sup class="side-bar__category__count">145</sup>
+                        <a href="#" class="side-bar__category__link">Образ жизни
+                            <sup class="side-bar__category__count">145</sup>
+                        </a>
                     </li>
                     <li class="side-bar__category">
-                        <a href="#" class="side-bar__category__link">Музыка</a>
-                        <sup class="side-bar__category__count">28</sup>
+                        <a href="#" class="side-bar__category__link">Музыка
+                            <sup class="side-bar__category__count">28</sup>
+                        </a>
                     </li>
                     <li class="side-bar__category">
-                        <a href="#" class="side-bar__category__link">Спорт</a>
-                        <sup class="side-bar__category__count">62</sup>
+                        <a href="#" class="side-bar__category__link">Спорт
+                            <sup class="side-bar__category__count">62</sup>
+                        </a>
                     </li>
                     <li class="side-bar__category">
-                        <a href="#" class="side-bar__category__link">Йога</a>
-                        <sup class="side-bar__category__count">8</sup>
+                        <a href="#" class="side-bar__category__link">Йога
+                            <sup class="side-bar__category__count">8</sup>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -378,5 +390,50 @@
             </div>
         </div>
     </footer>
+    <div class="popup">
+        <div class="popup-container">
+            <button type="button" id="close-button">.</button>
+            <label for="close-button" class="popup-close">
+                <span></span>
+            </label>
+            <div class="popup__title">
+                <span class="popup__title__text title-text">
+                    ваш фидбэк
+                </span>
+                <div class="popup__title__underline underline"></div>
+            </div>
+            <form action="#" class="popup__form">
+                <div class="popup__select">
+                    <label class="select-group">
+                        <span class="select-label">Как часто вы заходите на сайт?</span>
+                        <select class="select">
+                            <option value="almost" selected>Почти каждый день</option>
+                            <option value="few_days">Раз в несколько дней</option>
+                            <option value="few_weeks">Раз в несколько недель</option>
+                            <option value="few_years">Несколько раз в год</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="popup__radio">
+                    <span class="radio-label">Вы подписаны на e-mail рассылку?</span>
+                    <label class="radio-group">
+                        <input type="radio" name="popup_radio" id="choice1" value="yes" checked="checked">
+                        <span class="checkmark">Да</span>
+                    </label>
+                    <label class="radio-group">
+                        <input type="radio" name="popup_radio" id="choice2" value="no">
+                        <span class="checkmark">Нет</span>
+                    </label>
+                </div>
+                <div class="input">
+                    <label class="input-group">
+                        <span class="input-label">Расскажите, какой контент Вы хотели бы видеть на нашем сайте?</span>
+                        <textarea class="text-field" placeholder="Может, больше рецептов?"></textarea>
+                    </label>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
